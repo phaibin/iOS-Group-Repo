@@ -52,7 +52,7 @@
     self.passwordField.tag = kPasswordFiledTag;
     [self.userNameField becomeFirstResponder];
     
-    self.navigationItem.rightBarButtonItem = [BaseViewController customBarButtonItemWithTitle:@"确定" image:nil target:self action:@selector(login)];
+    self.navigationItem.rightBarButtonItem = [[LPBarButtonItem alloc] initWithType:LPBarButtonItemTypeNormal title:@"确定" image:nil target:self action:@selector(login)];
 }
 
 - (void)didReceiveMemoryWarning

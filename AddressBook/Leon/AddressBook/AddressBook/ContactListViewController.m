@@ -11,6 +11,7 @@
 #import "LPContact.h"
 #import "LPContactCell.h"
 #import "LoginViewController.h"
+#import "SettingsViewController.h"
 
 @interface ContactListViewController () {
     NSMutableDictionary *_contacts;
@@ -34,10 +35,10 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
     
-    self.navigationItem.leftBarButtonItem = [BaseViewController customBarButtonItemWithTitle:nil image:@"settings.png" target:self action:@selector(changeSettings:)];
+    self.navigationItem.leftBarButtonItem = [[LPBarButtonItem alloc] initWithType:LPBarButtonItemTypeNormal title:nil image:@"settings.png" target:self action:@selector(changeSettings:)];
     
-    UIBarButtonItem *addButton = [BaseViewController customBarButtonItemWithTitle:nil image:@"add.png" target:self action:@selector(addContact:)];
-    UIBarButtonItem *editButton = [BaseViewController customBarButtonItemWithTitle:@"编辑" image:nil target:self action:@selector(editContact:)];
+    LPBarButtonItem *addButton = [[LPBarButtonItem alloc] initWithType:LPBarButtonItemTypeNormal title:nil image:@"add.png" target:self action:@selector(addContact:)];
+    LPBarButtonItem *editButton = [[LPBarButtonItem alloc] initWithType:LPBarButtonItemTypeNormal title:@"编辑" image:nil target:self action:@selector(editContact:)];
 
     self.navigationItem.rightBarButtonItems = @[addButton, editButton];
     
@@ -80,7 +81,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    LPContactCell *cell = (LPContactCell *)[tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
+    LPContactCell *cell = (LPContactCell *)[tableView dequeueReusableCellWithIdentifier:@"ContactCell"];
     [cell prepareForTableView:tableView indexPath:indexPath];
     cell.cornerRadius = 5;
     
@@ -171,7 +172,8 @@
 
 - (IBAction)changeSettings:(id)sender
 {
-    
+    UINavigationController *navSettingsVC = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"NavSettingsViewController"];
+    [self presentModalViewController:navSettingsVC animated:YES];
 }
 
 - (IBAction)editContact:(id)sender

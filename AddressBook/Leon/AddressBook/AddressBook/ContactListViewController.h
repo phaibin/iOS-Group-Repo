@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ContactListViewController : UITableViewController
+@interface ContactListViewController : BaseTableViewController
 
 - (void)downloadData;
 

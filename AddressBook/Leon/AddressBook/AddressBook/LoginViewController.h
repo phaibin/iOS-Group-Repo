@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PrettyTableViewCell.h"
 
-@interface LoginViewController : UITableViewController<UITextFieldDelegate>
+@interface LoginViewController : BaseTableViewController<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet PrettyTableViewCell *userNameCell;
 @property (weak, nonatomic) IBOutlet PrettyTableViewCell *passwordCell;
