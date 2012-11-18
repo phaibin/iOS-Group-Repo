@@ -89,4 +89,11 @@
     return self;
 }
 
+- (void)setTitle:(NSString *)title
+{
+    UIButton *button = (UIButton *)(self.customView);
+    [button setTitle:title forState:UIControlStateNormal];
+    [button setTitle:title forState:UIControlStateHighlighted];
+}
+
 @end

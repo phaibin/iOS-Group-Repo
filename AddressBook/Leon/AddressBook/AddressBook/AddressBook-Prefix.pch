@@ -14,6 +14,7 @@
 #endif
 
 #import "Constants.h"
+#import "NSObject+Categories.h"
 #import "PrettyKit.h"
 #import "BaseTableViewController.h"
 #import "LPBarButtonItem.h"

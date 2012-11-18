@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LPContact.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : BaseTableViewController
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) LPContact *contact;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
+@property (weak, nonatomic) IBOutlet UILabel *chineseNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *englishNameLabel;
+
 @end

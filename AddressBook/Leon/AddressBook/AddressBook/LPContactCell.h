@@ -11,6 +11,7 @@
 
 @interface LPContactCell : PrettyTableViewCell
 
+@property (nonatomic, weak) IBOutlet UIImageView *headerImageView;
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *emailLabel;
 @property (nonatomic, weak) IBOutlet UILabel *mobileLabel;

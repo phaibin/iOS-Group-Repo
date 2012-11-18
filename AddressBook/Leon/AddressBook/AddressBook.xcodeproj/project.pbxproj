@@ -42,6 +42,7 @@
 		3555C953164FC884004764BD /* LPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3555C952164FC884004764BD /* LPViewController.m */; };
 		3555C956164FCACC004764BD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3555C955164FCACC004764BD /* LoginViewController.m */; };
 		35D4E1921652901C00CC5E6F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D4E1911652901C00CC5E6F /* QuartzCore.framework */; };
+		35E2CDE516590A85000FE451 /* NSObject+Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E2CDE416590A85000FE451 /* NSObject+Categories.m */; };
 		35FD782716576EDF00E8A0C5 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 35FD782616576EDF00E8A0C5 /* settings.png */; };
 		35FD782B1657775500E8A0C5 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 35FD78291657775500E8A0C5 /* add.png */; };
 		35FD782C1657775500E8A0C5 /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35FD782A1657775500E8A0C5 /* add@2x.png */; };
@@ -56,7 +57,6 @@
 		35FD78471657C58B00E8A0C5 /* bar_btn_normal_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35FD783E1657C58A00E8A0C5 /* bar_btn_normal_highlighted@2x.png */; };
 		35FD78481657C58B00E8A0C5 /* bar_btn_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 35FD783F1657C58B00E8A0C5 /* bar_btn_normal.png */; };
 		35FD78491657C58B00E8A0C5 /* bar_btn_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35FD78401657C58B00E8A0C5 /* bar_btn_normal@2x.png */; };
-		35FD784A1657C58B00E8A0C5 /* nav_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 35FD78411657C58B00E8A0C5 /* nav_background.png */; };
 		35FD784E1657CAD200E8A0C5 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FD784D1657CAD200E8A0C5 /* BaseTableViewController.m */; };
 		35FD78511657D5F000E8A0C5 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FD78501657D5EF00E8A0C5 /* AboutViewController.m */; };
 /* End PBXBuildFile section */
@@ -119,6 +119,8 @@
 		3555C954164FCACC004764BD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3555C955164FCACC004764BD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		35D4E1911652901C00CC5E6F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		35E2CDE316590A85000FE451 /* NSObject+Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Categories.h"; sourceTree = "<group>"; };
+		35E2CDE416590A85000FE451 /* NSObject+Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Categories.m"; sourceTree = "<group>"; };
 		35FD782616576EDF00E8A0C5 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		35FD78291657775500E8A0C5 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
 		35FD782A1657775500E8A0C5 /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 		3555C92B164FBE41004764BD /* AddressBook */ = {
 			isa = PBXGroup;
 			children = (
+				35E2CDE216590A62000FE451 /* Categories */,
 				35FD784B1657CA7800E8A0C5 /* CustomControl */,
 				35092042165682F5004834A8 /* TableCell */,
 				3509200E16567D6F004834A8 /* Libraries */,
@@ -318,6 +321,15 @@
 				3555C93B164FBE41004764BD /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		35E2CDE216590A62000FE451 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				35E2CDE316590A85000FE451 /* NSObject+Categories.h */,
+				35E2CDE416590A85000FE451 /* NSObject+Categories.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		35FD784B1657CA7800E8A0C5 /* CustomControl */ = {
@@ -405,7 +417,6 @@
 				35FD78471657C58B00E8A0C5 /* bar_btn_normal_highlighted@2x.png in Resources */,
 				35FD78481657C58B00E8A0C5 /* bar_btn_normal.png in Resources */,
 				35FD78491657C58B00E8A0C5 /* bar_btn_normal@2x.png in Resources */,
-				35FD784A1657C58B00E8A0C5 /* nav_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +449,7 @@
 				35FD78341657892300E8A0C5 /* LPBarButtonItem.m in Sources */,
 				35FD784E1657CAD200E8A0C5 /* BaseTableViewController.m in Sources */,
 				35FD78511657D5F000E8A0C5 /* AboutViewController.m in Sources */,
+				35E2CDE516590A85000FE451 /* NSObject+Categories.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
